@@ -185,6 +185,7 @@ img {
 .menu-link {
   color: var(--GREY);
   font-weight: var(--weight-medium);
+  padding: 24px 0;
 }
 
 .contact {
@@ -204,8 +205,7 @@ img {
 .address {
   font-style: normal;
   margin-left: auto;
-  padding-bottom: 24px;
-  padding-top: 24px;
+  padding: 24px 0;
 }
 
 .page-header {
@@ -214,11 +214,6 @@ img {
 
 .menu-item:not(:last-child) {
   margin-right: 40px;
-}
-
-.menu-item {
-  padding-bottom: 24px;
-  padding-top: 24px;
 }
 
 .contact-item:not(:last-child) {
