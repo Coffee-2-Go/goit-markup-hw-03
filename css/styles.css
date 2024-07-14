@@ -32,6 +32,8 @@
 
 .no-marker-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body {
@@ -41,6 +43,35 @@ body {
   line-height: 1.5;
   letter-spacing: var(--spacing-regular);
   background-color: var(--WHITE);
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+} /* 0 margin under images */
+
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* =============== COMPONENTS =============== */
@@ -52,7 +83,10 @@ body {
   line-height: 1.07;
   text-align: center;
   letter-spacing: var(--spacing-regular);
-  text-transform: capitalize;
+  width: 496px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
 }
 
 .header-section {
@@ -62,7 +96,7 @@ body {
   line-height: 1.11;
   text-align: center;
   letter-spacing: var(--spacing-regular);
-  text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .header-card {
@@ -70,9 +104,9 @@ body {
   font-size: 20px;
   font-weight: var(--weight-medium);
   line-height: 1.2;
-  text-align: center;
   letter-spacing: var(--spacing-regular);
-  text-transform: capitalize;
+  margin-bottom: 8px;
+
 }
 
 .small-text {
@@ -92,6 +126,37 @@ body {
   letter-spacing: var(--spacing-wide);
 }
 
+.flexible {
+  display: flex;
+}
+
+.justified {
+  justify-content: space-between;
+}
+
+.gapped {
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}   /* hides title for user but search engines still can see it */
+
 /* =============== HEADER =============== */
 
 .logo {
@@ -102,6 +167,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .logo:hover,
@@ -138,18 +204,42 @@ body {
 
 .address {
   font-style: normal;
+  margin-left: auto;
+}
+
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--CORNFLOWER);
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 /* =============== HERO =============== */
 
 .hero {
   background-color: var(--NAVY-BLUE);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .model-btn {
+  display: flex;
   color: var(--WHITE);
+  border-radius: 4px;
   background: var(--IRIS);
   cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
 }
 
 .model-btn:hover,
@@ -159,12 +249,17 @@ body {
 
 /* =============== ABOUT =============== */
 
+.about-card {
+  width: 264px;
+}
+
 /* =============== TEAM =============== */
+
 .team {
   background-color: var(--CLOUD);
 }
 
-.card {
+.employee-card {
   background-color: var(--WHITE);
 }
 
@@ -172,22 +267,48 @@ body {
   font-size: 16px;
 }
 
-/* =============== PORTFOLIO =============== */
-
-.filter-btn {
-  color: var(--IRIS);
-  border: 1px solid var(--CORNFLOWER);
-  background: var(--CLOUD);
+.employee-description {
+  padding: 32px 16px;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--WHITE);
+  text-align: center;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.filter-btn:hover {
-  color: var(--WHITE);
-  background: var(--OCEAN);
+/* =============== PORTFOLIO =============== */
+
+.portfolio-description {
+  padding: 32px 16px;
+  border-left: 1px solid var(--CORNFLOWER);
+  border-right: 1px solid var(--CORNFLOWER);
+  border-bottom: 1px solid var(--CORNFLOWER);
+  /* background: var(--WHITE); */
+  /* text-align: flex-start; */
+}
+
+.portfolio-photo {
+  flex-basis: calc(100% - 2 * 24px / 3); 
+}
+
+
+.portfolio-filter {
+  width: 590px;
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =============== FOOTER =============== */
 
+.footer {
+  background: var(--NAVY-BLUE);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .footer-text {
   color: var(--CLOUD);
   background-color: var(--NAVY-BLUE);
+  margin-top: 17.5px;
+  width: 264px;
 }

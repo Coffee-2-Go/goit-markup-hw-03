@@ -1,4 +1,4 @@
-# Homework: Module 3 - Block model. Flexbox
+# Tier 2. Module 1. Homework 3 - Block model. Flexbox
 
 * Create repository `goit-markup-hw-03`.
 * Clone the created repository and copy the files of previous work to it.
